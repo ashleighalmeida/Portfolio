@@ -44,5 +44,8 @@ group :development, :test do
 
   gem 'bourbon'
   
+  gem 'compass'
+
+  gem 'sass'
 end
 
