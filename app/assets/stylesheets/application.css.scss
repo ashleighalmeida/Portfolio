@@ -10,10 +10,12 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
-  *= require_self
+ *= require_self
  */
 
-@import "compass/css3";
+// @import "compass/css3";
+
+$hex-size: 6em;
 
 html, body {
   background-color: #ffffff;
@@ -33,12 +35,8 @@ html, body {
   height: 100%;
   position:fixed;
   background-color: #dafaea;
-  background:
-  linear-gradient(to bottom right,rgba(218, 250, 234, 0.9), rgba(254, 240, 232, 1)), 
-  url('http://i60.tinypic.com/21ke9u9.gif') center center;
-  background-size: cover; 218, 250, 234, 0.9
-
-  
+  background: linear-gradient(to bottom right,rgba(218, 250, 234, 0.9), rgba(254, 240, 232, 1)), url('http://i60.tinypic.com/21ke9u9.gif') center;
+  background-size: cover, 218, 250, 234, 0.9; 
  }
 
 .main {
@@ -53,8 +51,8 @@ html, body {
   letter-spacing:1px;
   }
 
-$hex-size: 6em; 
-}
+// 
+
 
 .container {
   width: 1000px; 
@@ -102,4 +100,3 @@ ol.odd {
 
 
 
-}
