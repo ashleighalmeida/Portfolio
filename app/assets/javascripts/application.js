@@ -14,3 +14,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$(function() {
+  $(".nav").click(function() {
+    $(".sidebar").animate({width: 'toggle'});
+  })  
+})
+
+
