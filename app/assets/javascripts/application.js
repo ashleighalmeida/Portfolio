@@ -16,10 +16,43 @@
 //= require_tree .
 
 
+// $(function() {
+//   $(".nav").click(function() {
+
+//     $(".sidebar").animate({width: 'toggle'});
+//     $('.fade').fadeIn();
+//     $(".cbp-af-header").animate({left: "-57px"}, 400);
+
+//   })  
+// })
+
+
+
+
 $(function() {
   $(".nav").click(function() {
-    $(".sidebar").animate({width: 'toggle'});
+    // Just cacheing the sidebar element so that we don't query it every time
+    var sidebar = $(".sidebar");
+
+    if (sidebar.hasClass("visible")) {
+        // Do stuff if the sidebar is visible: hide it, remove the .fade and mave the header back
+        sidebar.animate({width: 'toggle'});
+        $(".fade").fadeOut();
+        $(".cbp-af-header").animate({left: "0px"}, 400);
+
+        // Remove the .visible class from .sidebar
+        sidebar.removeClass("visible");
+    }
+    else {
+        // Do stuff if the sidebar is not visible: show it and the .fade, and move the header
+        sidebar.animate({width: 'toggle'});
+        $(".fade").fadeIn();
+
+        // Put the initial value of the left property of .cbp-af-header
+        $(".cbp-af-header").animate({left: "-57px"}, 400);
+
+        // Tag the .sidebar with the .visible class
+        sidebar.addClass("visible");
+    }
   })  
 })
-
-

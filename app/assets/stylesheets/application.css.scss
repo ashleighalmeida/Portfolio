@@ -26,11 +26,23 @@ html, body {
 
 }
 
+.fade {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.5; }
+
+
+.fade { display: none; }
+
 .cbp-af-header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 80%;
+  width: 100%;
   background: #ffffff;
   z-index: 10000;
   height: 60px;
@@ -193,6 +205,9 @@ html, body {
 
   
  }
+
+.sidebar { display: none; }
+
 
 .main {
   margin-left: 15%;
