@@ -24,7 +24,7 @@ $hex-size: 6em;
 html, body {
   font-size: 1.5em;
   font-family: 'futura', 'helvetica';
-  background: linear-gradient(to bottom right,rgba(212, 237, 251, 0.7), rgba(254, 240, 232, 0.9)), url("http://i.imgur.com/63AWW.jpg") no-repeat bottom fixed;
+  background: linear-gradient(to bottom right,rgba(212, 237, 251, 0.8), rgba(000, 000, 000, 0.9)), url("http://i.imgur.com/63AWW.jpg") no-repeat bottom fixed;
   -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -45,6 +45,7 @@ html, body {
     opacity: 0.5; }
 
 
+
 .fade { display: none; }
 
 .cbp-af-header {
@@ -52,12 +53,13 @@ html, body {
   top: 0;
   left: 0;
   width: 100%;
-  background: #ffffff;
+  
   z-index: 10000;
   height: 60px;
   overflow: hidden;
   background-attachment: no-repeat;
-  border-bottom: 1px solid #f6f6f6;
+  // border-top: 5px solid #f6f6f6;
+  position:fixed;
 
 
 }
@@ -67,7 +69,8 @@ html, body {
   max-width: 69em;
   margin: 0 auto;
   padding: 0 1.875em;
-  position:fixed;
+  position: fixed;
+  z-index:-1000;
 
 
 }
@@ -81,7 +84,10 @@ html, body {
   display: inline-block;
   position: relative;
   font-size: 12px;
+
 }
+
+
 
  /* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
 .cbp-af-header h1,
@@ -100,6 +106,8 @@ html, body {
 
 .cbp-af-header nav {
   float: right;
+  line-height: 50px;
+  margin:15px;
 }
 
 .cbp-af-header nav a {
@@ -211,7 +219,7 @@ html, body {
   background-color: #dafaea;
   z-index:1000;
   background:
-  linear-gradient(to bottom right,rgba(102, 183, 176, 0.9), rgba(254, 240, 232, 1)), 
+  linear-gradient(to bottom right,rgba(102, 183, 176, 0.9), rgba(000, 000, 000, 1)), 
   url('http://i60.tinypic.com/21ke9u9.gif') center center;
   // background-size: cover; 218, 250, 234, 0.9
   -moz-box-shadow:    10px 10px 10px 8px #424242;
@@ -270,7 +278,7 @@ html, body {
   // width: calc(100% - 35%);
   font-family: 'lato';
   position:fixed;
-  font-size: 60%;
+  font-size: 50%;
   letter-spacing:5px;
   z-index: 100;
   color: #ffffff;
@@ -280,13 +288,14 @@ html, body {
   // border-radius:3%;
 
   border-left: none;
-  border-right:none
+  border-right:none;
+  border-top:none;
+
+  // text-shadow: 2px 2px 7px #666666;
 
     
 
   }
-
-
 
 
 

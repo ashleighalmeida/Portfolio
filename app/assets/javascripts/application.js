@@ -39,7 +39,7 @@ $(function() {
         sidebar.animate({width: 'toggle'});
         $(".fade").fadeOut();
         $(".cbp-af-header").animate({left: "0px"}, 400);
-        $(".main").animate({left: "0px"}, 400);
+       $(".main").show();
 
         // Remove the .visible class from .sidebar
         sidebar.removeClass("visible");
@@ -52,7 +52,7 @@ $(function() {
         // Put the initial value of the left property of .cbp-af-header
         $(".cbp-af-header").animate({left: "-57px"}, 400);
 
-        $(".main").animate({left: "-1000px"}, 400);
+         $(".main").hide();
 
 
 
