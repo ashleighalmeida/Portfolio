@@ -15,6 +15,10 @@
 
 // @import "compass/css3";
 
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+@import url('http://fonts.googleapis.com/css?family=Lato:100');
+
 $hex-size: 6em;
 
 html, body {
@@ -26,6 +30,8 @@ html, body {
     -o-background-size: cover;
   width:100%;
   height:100%;
+  overflow: hidden;
+  position: absolute;
  
 }
 
@@ -61,6 +67,7 @@ html, body {
   max-width: 69em;
   margin: 0 auto;
   padding: 0 1.875em;
+  position:fixed;
 
 
 }
@@ -68,6 +75,7 @@ html, body {
 .cbp-af-header h1 {
   display: inline-block;
   font-size: 20px;
+  position:relative;
 }
 .cbp-af-header nav {
   display: inline-block;
@@ -206,25 +214,79 @@ html, body {
   linear-gradient(to bottom right,rgba(102, 183, 176, 0.9), rgba(254, 240, 232, 1)), 
   url('http://i60.tinypic.com/21ke9u9.gif') center center;
   // background-size: cover; 218, 250, 234, 0.9
-
+  -moz-box-shadow:    10px 10px 10px 8px #424242;
+    -webkit-box-shadow: 10px 10px 10px 8px  #424242;
+    box-shadow:         10px 10px 10px 8px  #424242;
 
   
  }
+
+
+.sidebar a {
+  font-family: 'lato';
+  font-size:90%;
+  color: #ffffff;
+  // border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  letter-spacing: 5px;
+  text-decoration: none;
+  padding: 5%;
+  hover: #000000;
+  
+ 
+ 
+}
+
+.sidebar a:hover {
+  transition: all 0.5s ease-in-out;
+  padding-left: 30px;
+  font-weight: 600;
+  font-family: 'Open Sans';
+
+
+}
+
+.sidenav {
+  top: 30%;
+  position: absolute;
+  z-index:1;
+}
+
 
 .sidebar { display: none; }
 
 
 .main {
-  margin-left: 15%;
-  max-width: 54em;
-  top:0;
-  padding: 1em 3em 3em 4em;
-  width: calc(100% - 35%);
-  font-family: 'HelveticaNeue-Light';
-  position:relative;
-  font-size: 50%;
-  letter-spacing:1px;
+   top: 25%;
+    left: 35%;
+    // margin-top: -50px;
+    // margin-left: -50px;
+    //  -webkit-transform: translate(-50%, -50%);
+    // transform: translate(-50%, -50%);
+  
+  height: auto;
+  max-width: 30em;
+  // padding: 1em 3em 10em 4em;
+  // width: calc(100% - 35%);
+  font-family: 'lato';
+  position:fixed;
+  font-size: 60%;
+  letter-spacing:5px;
+  z-index: 100;
+  color: #ffffff;
+  padding: 1%;
+  
+  border: 2px solid white;
+  // border-radius:3%;
+
+  border-left: none;
+  border-right:none
+
+    
+
   }
+
+
 
 
 
