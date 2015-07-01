@@ -50,7 +50,7 @@ $(function() {
         $(".fade").fadeIn();
 
         // Put the initial value of the left property of .cbp-af-header
-        $(".cbp-af-header").animate({left: "-57px"}, 400);
+        $(".cbp-af-header").animate({left: "-54px"}, 400);
 
          $(".main").hide();
 

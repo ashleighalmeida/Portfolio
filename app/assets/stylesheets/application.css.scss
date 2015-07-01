@@ -53,12 +53,13 @@ html, body {
   top: 0;
   left: 0;
   width: 100%;
+  background:url("http://www.transparenttextures.com/patterns/diamond-eyes.png");
   
   z-index: 10000;
   height: 60px;
   overflow: hidden;
   background-attachment: no-repeat;
-  // border-top: 5px solid #f6f6f6;
+  // border-bottom: 1px solid #f6f6f6;
   position:fixed;
 
 
@@ -219,13 +220,12 @@ html, body {
   background-color: #dafaea;
   z-index:1000;
   background:
-  linear-gradient(to bottom right,rgba(102, 183, 176, 0.9), rgba(000, 000, 000, 1)), 
+  linear-gradient(to bottom right,rgba(182, 232, 230, 0.9), rgba(251, 226, 212, 0.9)), 
   url('http://i60.tinypic.com/21ke9u9.gif') center center;
   // background-size: cover; 218, 250, 234, 0.9
   -moz-box-shadow:    10px 10px 10px 8px #424242;
     -webkit-box-shadow: 10px 10px 10px 8px  #424242;
     box-shadow:         10px 10px 10px 8px  #424242;
-
   
  }
 
@@ -283,10 +283,10 @@ html, body {
   z-index: 100;
   color: #ffffff;
   padding: 1%;
-  
+
   border: 2px solid white;
   // border-radius:3%;
-
+// background:url("http://www.julie-lavergne.com/img/common/trame.png");
   border-left: none;
   border-right:none;
   border-top:none;
