@@ -23,6 +23,8 @@
 
 $hex-size: 4.5em;
 
+
+
 html, body {
   font-size: 1.5em;
   font-family: 'futura', 'helvetica';
@@ -495,6 +497,29 @@ position:relative;
   padding-top:10%;
 }
 
+.contact input, textarea {
+  padding: 5px;
+  width: 342px;
+  font-family: 'Helvetica';
+  font-size:14px;
+  font-weight:300;
+  color:#fff;
+  background-color:transparent;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid transparent;
+  
+  margin-bottom:15px;
+}
+
+.contact textarea {
+  height: 100px;
+}
+
+::-webkit-input-placeholder { 
+    color:    #ffffff;
+}
 
 
 

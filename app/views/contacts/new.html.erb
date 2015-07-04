@@ -1,5 +1,11 @@
 <div class="container">
 <h1>Contact</h1>
+
+<img src=http://i62.tinypic.com/qmx5is.png> ashleighalmeida@gmail.com <br>
+<img src=http://i57.tinypic.com/2mdj910.png> 647.983.5349 <br>
+<img src=http://i60.tinypic.com/1o2fso.png> ashleighalmeida <p>
+
+<div class="contact">
  <%= form_for @contact do |f| %>
     <%= f.text_field  :name, placeholder: "Name", :required => true %><br>
     <%= f.text_field  :email, placeholder: "Email", :required => true %><br>
@@ -12,5 +18,5 @@
       <%= f.submit 'Send', :class=> "btn btn-primary" %>
     </div>
   <% end %>
-
+</div>
   </div>
