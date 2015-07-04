@@ -1,0 +1,16 @@
+<div class="container">
+<h1>Contact</h1>
+ <%= form_for @contact do |f| %>
+    <%= f.text_field  :name, placeholder: "Name", :required => true %><br>
+    <%= f.text_field  :email, placeholder: "Email", :required => true %><br>
+    <%= f.text_area :message, placeholder: "Message", :as => :text, :required => true %>
+    <div class= "hidden">
+      <%= f.text_field  :nickname, :hint => 'Leave this field blank!' %>
+    </div>
+    <div>
+      </br>
+      <%= f.submit 'Send', :class=> "btn btn-primary" %>
+    </div>
+  <% end %>
+
+  </div>
