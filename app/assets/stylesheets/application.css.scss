@@ -155,6 +155,10 @@ font-size: 2.5vmax;
   background:url("http://www.julie-lavergne.com/img/common/trame.png");
 }
 
+body index .main {
+    display: none;
+}
+
 .main img {
   width: auto;
   height: auto;

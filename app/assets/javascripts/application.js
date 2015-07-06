@@ -63,3 +63,11 @@ $(function() {
     
  
 })
+
+$(function(){
+      if (window.location.pathname == "/index.html.erb") {
+            $('.main').hide();
+      } else {
+            $(".main").css({"background":"none"});
+      }
+ });
