@@ -38,7 +38,7 @@ $(function() {
         // Do stuff if the sidebar is visible: hide it, remove the .fade and mave the header back
         sidebar.animate({width: 'toggle'});
         $(".fade").fadeOut();
-        $(".cbp-af-header").animate({left: "0px"}, 400);
+        $(".header h1").animate({left: "50px"}, 400);
        $(".main").show();
 
         // Remove the .visible class from .sidebar
@@ -50,7 +50,7 @@ $(function() {
         $(".fade").fadeIn();
 
         // Put the initial value of the left property of .cbp-af-header
-        $(".cbp-af-header").animate({left: "-54px"}, 400);
+        $(".header h1").animate({left: "-5px"}, 400);
 
          $(".main").hide();
 
@@ -59,5 +59,7 @@ $(function() {
         // Tag the .sidebar with the .visible class
         sidebar.addClass("visible");
     }
-  })  
+ })  
+    
+ 
 })

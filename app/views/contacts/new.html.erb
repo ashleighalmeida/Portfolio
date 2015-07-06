@@ -1,9 +1,11 @@
-<div class="container">
+<div class="main">
+<div id="child">
 <h1>Contact</h1>
-
+<small>
 <img src=http://i62.tinypic.com/qmx5is.png> ashleighalmeida@gmail.com <br>
 <img src=http://i57.tinypic.com/2mdj910.png> 647.983.5349 <br>
 <img src=http://i60.tinypic.com/1o2fso.png> ashleighalmeida <p>
+</small>
 
 <div class="contact">
  <%= form_for @contact do |f| %>
@@ -18,5 +20,6 @@
       <%= f.submit 'Send', :class=> "btn btn-primary" %>
     </div>
   <% end %>
+</div>
 </div>
   </div>

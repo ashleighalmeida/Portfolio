@@ -30,186 +30,61 @@ html, body {
   font-family: 'futura', 'helvetica';
   background: linear-gradient(to bottom right,rgba(212, 237, 251, 0.8), rgba(000, 000, 000, 0.9)), url("http://i.imgur.com/63AWW.jpg") no-repeat bottom fixed;
   -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   width:100%;
   height:100%;
   overflow: hidden;
   position: absolute;
- 
+  display:flex;
 }
 
 .fade {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: #000;
-    opacity: 0.5; }
-
-
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5; 
+}
 
 .fade { display: none; }
 
-.cbp-af-header {
-  position: fixed;
+.header {
+  margin: 0 auto;
   top: 0;
   left: 0;
   width: 100%;
   background:url("http://www.julie-lavergne.com/img/common/trame.png");
-  
+  position: fixed;
   z-index: 10000;
   height: 60px;
   overflow: hidden;
   background-attachment: no-repeat;
-  // border-bottom: 1px solid #f6f6f6;
-  position:fixed;
-
-
 }
 
-.cbp-af-header .cbp-af-inner {
-  width: 90%;
-  max-width: 69em;
-  margin: 0 auto;
-  padding: 0 1.875em;
-  position: fixed;
-  z-index:-1000;
-
-
-}
-
-.cbp-af-header h1 {
-  display: inline-block;
-  font-size: 20px;
-  position:relative;
-}
-.cbp-af-header nav {
-  display: inline-block;
-  position: relative;
-  font-size: 12px;
-
-}
-
-
-
- /* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
-.cbp-af-header h1,
-.cbp-af-header nav a {
-  line-height: 60px;
-}
-
-.cbp-af-header h1 {
+.header h1 {
   text-transform: uppercase;
   color: #333;
   letter-spacing: 4px;
-  font-size: 4em;
+  font-size: 20px;
   margin: 0;
   float: left;
+  position:relative;
+  display:block;
+  padding-right: 34px;
+  margin: 17px;
+  left:50px;
 }
 
-.cbp-af-header nav {
+.header nav {
   float: right;
-  line-height: 50px;
-  margin:15px;
-}
-
-.cbp-af-header nav a {
-  color: #aaa;
-  font-weight: 700;
-  margin: 0 0 0 30px;
-  font-size: 1.4em;
-  text-decoration: none;
-  font-family: Helvetica;
-}
-
-.cbp-af-header nav a:hover {
-  color: #333;
-  background-color: #fbe2d4;
-  border-radius: 3px;
-  padding: 10px;
-}
-
-/* Transitions and class for reduced height */
-.cbp-af-header h1 {
-  font-size:20px;
-}
-.cbp-af-header nav a {
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-  font-size:15px;
-}
-
-.cbp-af-header.cbp-af-header-shrink {
-  height: 50px;
-}
-
-.cbp-af-header.cbp-af-header-shrink h1,
-.cbp-af-header.cbp-af-header-shrink nav a {
-  line-height: 50px;
-}
-
-.cbp-af-header.cbp-af-header-shrink h1 {
-  font-size: 2em;
-}
-
-/* Example Media Queries */
-@media screen and (max-width: 55em) {
-  
-  .cbp-af-header .cbp-af-inner {
-    width: 100%;
-  }
-
-  .cbp-af-header h1,
-  .cbp-af-header nav {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    float: none;
-  }
-
-
-
-
-  .cbp-af-header h1,
-  .cbp-af-header nav a {
-    line-height: 115px;
-  }
-
-  .cbp-af-header nav a {
-    margin: 0 10px;
-  }
-
-  .cbp-af-header.cbp-af-header-shrink h1,
-  .cbp-af-header.cbp-af-header-shrink nav a {
-    line-height: 45px;
-  }
-
-  .cbp-af-header.cbp-af-header-shrink h1 {
-    font-size: 2em;
-  }
-
-  .cbp-af-header.cbp-af-header-shrink nav a {
-    font-size: 1em;
-  }
-}
-
-@media screen and (max-width: 32.25em) {
-  .cbp-af-header nav a {
-    font-size: 1em;
-  }
-}
-
-@media screen and (max-width: 24em) {
-  .cbp-af-header nav a,
-  .cbp-af-header.cbp-af-header-shrink nav a {
-    line-height: 1;
-  }
-}
-
-
+  margin: 10px;
+  margin-left: 50px;
+  position: relative;
+  margin-right: 50px ;
+ }
 
 .sidebar {
   -moz-box-sizing: border-box;
@@ -225,28 +100,27 @@ html, body {
   z-index:1000;
   background:
   linear-gradient(to bottom right,rgba(182, 232, 230, 0.9), rgba(251, 226, 212, 0.9)), 
-  url('http://i60.tinypic.com/21ke9u9.gif') center center;
-  // background-size: cover; 218, 250, 234, 0.9
+  url('http://i60.tinypic.com/21ke9u9.gif') no-repeat center center;
+  background-size: cover; 
   -moz-box-shadow:    10px 10px 10px 8px #424242;
-    -webkit-box-shadow: 10px 10px 10px 8px  #424242;
-    box-shadow:         10px 10px 10px 8px  #424242;
-  
+  -webkit-box-shadow: 10px 10px 10px 8px  #424242;
+  box-shadow:         10px 10px 10px 8px  #424242;
+  // transform: translate(-50%, -50%);
+  position:fixed;
+  display: flex;
  }
 
 
 .sidebar a {
   font-family: 'lato';
-  font-size:90%;
+font-size: 2.5vmax;
   color: #ffffff;
-  // border-top: 1px solid #ffffff;
   border-bottom: 1px solid #ffffff;
   letter-spacing: 5px;
   text-decoration: none;
   padding: 5%;
   hover: #000000;
-  
- 
- 
+  width: auto; 
 }
 
 .sidebar a:hover {
@@ -254,84 +128,117 @@ html, body {
   padding-left: 30px;
   font-weight: 600;
   font-family: 'Open Sans';
-
-
 }
 
 .sidenav {
   top: 30%;
   position: absolute;
   z-index:1;
-}
 
+}
 
 .sidebar { display: none; }
 
 
 .main {
-   top: 25%;
-    left: 35%;
-      overflow:hidden;
-    // margin-top: -50px;
-    // margin-left: -50px;
-    //  -webkit-transform: translate(-50%, -50%);
-    // transform: translate(-50%, -50%);
-  
-  height: auto;
-  max-width: 30em;
-  // padding: 1em 3em 10em 4em;
-  // width: calc(100% - 35%);
   font-family: 'lato';
-  position:fixed;
-  font-size: 50%;
-  letter-spacing:5px;
-  z-index: 100;
   color: #ffffff;
-  padding: 1%;
+  letter-spacing: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 0;
+  transform: translate(-50%, -50%);
+  padding: 1.2em;
+  font-size: .5em;
+  border-bottom: 2px solid #ffffff;
+  background:url("http://www.julie-lavergne.com/img/common/trame.png");
+}
 
-  border: 2px solid white;
-  // border-radius:3%;
-// background:url("http://www.julie-lavergne.com/img/common/trame.png");
-  border-left: none;
-  border-right:none;
-  border-top:none;
+.main img {
+  width: auto;
+  height: auto;
+}
 
-  // text-shadow: 2px 2px 7px #666666;
+.child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 0;
+  transform: translate(-50%, -50%);
+  padding: 1.2em;
+  font-size: .7em;
+}
 
-    
 
-  }
+.flex-item {
+  margin: auto;
+  display: flex;
+  overflow:auto;
+}
+
+.landingcontainer {
+-webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+  display: flex;
+ 
+  margin: 0 auto;
+  
+    height: auto;
+    max-width: 40%;
+  border-bottom: 2px solid white;
+ font-family: 'lato';
+  letter-spacing:5px;
+ color: #ffffff;
+ font-size: 0%;
+ overflow:hidden;
+ }
 
 .container {
-   top: 25%;
-    left: 35%;
-      overflow:hidden;
-    // margin-top: -50px;
-    // margin-left: -50px;
-    //  -webkit-transform: translate(-50%, -50%);
-    // transform: translate(-50%, -50%);
+-webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+  display: flex;
+ 
+  margin: 0 auto;
+  margin-top: 7%;
+
+    height: 500px;
+    width: 30%;
   
-  height: auto;
-  max-width: 30em;
-  // padding: 1em 3em 10em 4em;
-  // width: calc(100% - 35%);
-  font-family: 'lato';
-  position:fixed;
-  font-size: 50%;
+  border-bottom: 2px solid white;
+background:url("http://www.julie-lavergne.com/img/common/trame.png")   ;
+ font-family: 'lato';
   letter-spacing:5px;
-  z-index: 100;
-  color: #ffffff;
-  padding: 1%;
-
-  border: 2px solid white;
-  // border-radius:3%;
-background:url("http://www.julie-lavergne.com/img/common/trame.png");
-  border-left: none;
-  border-right:none;
-  border-top:none;
-
-  // text-shadow: 2px 2px 7px #666666;
-
+ color: #ffffff;
+ font-size: 50%;
     
 
   }
@@ -452,7 +359,7 @@ position:relative;
 }
 
 #categories div h1, #categories div p{
-  width:90%;
+  width:200%;
   padding:0 5%;
   background-color:#008080; background-color: rgba(0, 128, 128, 0.8);
   font-family: 'Roboto', sans-serif;
@@ -509,6 +416,7 @@ position:relative;
   border-left: 1px solid transparent;
   border-bottom: 1px solid #fff;
   border-right: 1px solid transparent;
+
   
   margin-bottom:15px;
 }
@@ -519,6 +427,7 @@ position:relative;
 
 ::-webkit-input-placeholder { 
     color:    #ffffff;
+
 }
 
 
