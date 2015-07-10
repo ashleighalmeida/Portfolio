@@ -1,18 +1,51 @@
 <!DOCTYPE html>
-<html class="no-js">
+
 <head>
+
 <title>AaP</title>
 <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-<%= javascript_include_tag "jquery.min.js", "data-turbolinks-track" => true  %>
-<%= javascript_include_tag "jquery.textfill.min.js", "data-turbolinks-track" => true  %>
+
+
 <%= csrf_meta_tags %>
 
 </head>
-<body>
-<div class="header">
-<h1>ASHLEIGH</font> <font color=#f6f6f6>/</font> <font color=#fbe2d4>ALMEIDA</font></h1>
 
+<body>
+
+<header class="header">
+<h1>ASHLEIGH</font> <font color=#f6f6f6>/</font> <font color=#fbe2d4>ALMEIDA</font></h1></header>
+  <div class="burger">
+    <div class="burger__patty"></div>
+    <div class="burger__patty"></div>
+    <div class="burger__patty"></div>
+  </div>
+
+<nav class="menu">
+    <div class="menu__brand">
+      <a href=""><div class="logo"></div></a>
+    </div>
+    <ul class="menu__list">
+      <li class="menu__item"><a href="/index/about" class="menu__link">About</a></li>
+      <li class="menu__item"><a href="" class="menu__link">Work</a></li>
+       <li class="menu__item"><a href="/contacts/new" class="menu__link">Contact</a></li>
+        <li class="menu__item"><a href="" class="menu__link">Blog</a></li>
+
+      <li class="menu__item">
+        <a href="https://github.com/ashleighalmeida" target="_blank" class="menu__link menu__link--social"><i class="fa fa-twitter">
+          <img src=http://i62.tinypic.com/2drxnjl.png>
+        </i></a>
+      </li>
+      <li class="menu__item">
+        <a href="https://dribbble.com/ettrics" target="_blank" class="menu__link menu__link--social">
+          <i class="fa fa-dribbble"></i></a>
+      </li>
+    </ul>
+  </nav>
+
+</header>
+
+
+<!-- 
 
 <div class="nav">
 <nav>
@@ -20,31 +53,25 @@
 </nav>
 
 </div>
-
-
+</div>
+ -->
+<!-- 
 <div class="sidebar">
 <div class="nav">
 <nav>
 <img style="position: absolute" src=http://i58.tinypic.com/33aqv0n.png>
 </nav>
 <div class="sidenav" style='width:100px;height:50px'>
-<a href=#>ABOUT</a> <!-- <img src=http://i57.tinypic.com/34inz3o.png> --> <p>
-<a href=#>WORK</a> <!-- <img src=http://i61.tinypic.com/291km10.png><p> --> <p>
-<a href=#>CONTACT</a><!--  <img src=http://i62.tinypic.com/65py6r.png><p> --><p>
-<!-- <a href=#>SOCIAL</a> <img src=http://i62.tinypic.com/347h4cy.png> -->
-
-</div>
-
-</div>
-</div>
-</div>
-</div>
-</div>
+<a href=#>ABOUT</a> <img src=http://i57.tinypic.com/34inz3o.png> <p>
+<a href=#>WORK</a> <!-- <img src=http://i61.tinypic.com/291km10.png><p> <p>
+<a href="/contacts/new">CONTACT</a><!--  <img src=http://i62.tinypic.com/65py6r.png><p> --><p>
 
 
+
+<div class="fade"></div>
 
 <%= yield %>
-
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
 
 </body>

@@ -15,59 +15,112 @@
 //= require turbolinks
 //= require_tree .
 
+ // document.addEventListener("DOMContentLoaded", function(event) {
+ //    console.log("DOM fully loaded and parsed");
+ 
+
+(function() {
+  
+  var Menu = (function() {
+    var burger = document.querySelector('.burger');
+    var menu = document.querySelector('.menu');
+    var menuList = document.querySelector('.menu__list');
+    var brand = document.querySelector('.menu__brand');
+    var menuItems = document.querySelectorAll('.menu__item');
+    
+    var active = false;
+    
+    var toggleMenu = function() {
+      if (!active) {
+        menu.classList.add('menu--active');
+        menuList.classList.add('menu__list--active');
+        brand.classList.add('menu__brand--active');
+        burger.classList.add('burger--close');
+        $(".main").hide();
+        $(".header background:url").hide();
+        for (var i = 0, ii = menuItems.length; i < ii; i++) {
+          menuItems[i].classList.add('menu__item--active');
+        }
+        
+        active = true;
+      } else {
+        menu.classList.remove('menu--active');
+        menuList.classList.remove('menu__list--active');
+        brand.classList.remove('menu__brand--active');
+        burger.classList.remove('burger--close');
+         $(".main").show();
+
+        for (var i = 0, ii = menuItems.length; i < ii; i++) {
+          menuItems[i].classList.remove('menu__item--active');
+        }
+        
+        active = false;
+      }
+    };
+    
+    var bindActions = function() {
+      burger.addEventListener('click', toggleMenu, false);
+    };
+    
+    var init = function() {
+      bindActions();
+    };
+    
+    return {
+      init: init
+    };
+    
+  }());
+  
+  Menu.init();
+  
+}());
+
+ // });
+
 
 // $(function() {
 //   $(".nav").click(function() {
+//     var sidebar = $(".sidebar");
+//      if (sidebar.hasClass("visible")) {
+        
+//         sidebar.animate({width: 'toggle'});
+//         $(".fade").fadeOut();
+//         $(".header h1").animate({left: "50px"}, 400);
+//        $(".main").show();
 
-//     $(".sidebar").animate({width: 'toggle'});
-//     $('.fade').fadeIn();
-//     $(".cbp-af-header").animate({left: "-57px"}, 400);
+        
+//         sidebar.removeClass("visible");
+//     }
+//     else {
+      
+//         sidebar.animate({width: 'toggle'});
+//         $(".fade").fadeIn();
 
-//   })  
-// })
+        
+//         $(".header h1").animate({left: "-5px"}, 400);
 
-
-
-
-$(function() {
-  $(".nav").click(function() {
-    // Just cacheing the sidebar element so that we don't query it every time
-    var sidebar = $(".sidebar");
-
-    if (sidebar.hasClass("visible")) {
-        // Do stuff if the sidebar is visible: hide it, remove the .fade and mave the header back
-        sidebar.animate({width: 'toggle'});
-        $(".fade").fadeOut();
-        $(".header h1").animate({left: "50px"}, 400);
-       $(".main").show();
-
-        // Remove the .visible class from .sidebar
-        sidebar.removeClass("visible");
-    }
-    else {
-        // Do stuff if the sidebar is not visible: show it and the .fade, and move the header
-        sidebar.animate({width: 'toggle'});
-        $(".fade").fadeIn();
-
-        // Put the initial value of the left property of .cbp-af-header
-        $(".header h1").animate({left: "-5px"}, 400);
-
-         $(".main").hide();
+//          $(".main").hide();
 
 
 
-        // Tag the .sidebar with the .visible class
-        sidebar.addClass("visible");
-    }
- })  
-    
+        
+//         sidebar.addClass("visible");
+//     }
+//  })  
+
+
+
  
-})
+// });
 
-$(function(){
-      if (window.location.pathname == "/index.html.erb") {
-            $('.main').hide();
-      } else {
-            $(".main").css({"background":"none"});
-      }
- });
+
+
+
+// // $(function(){
+// //       if (window.location.pathname == "/index.html.erb") {
+// //             $('.main').hide();
+// //       } else {
+// //             $(".main").css({"background":"none"});
+// //       }
+// //  });
