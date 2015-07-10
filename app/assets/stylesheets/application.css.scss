@@ -90,6 +90,17 @@ html, body {
   top: 0;
   width: 100%;
   visibility: hidden;
+
+
+}
+
+.menu h2 {
+  color:#fbe2d4;
+ background:url("http://www.julie-lavergne.com/img/common/trame.png");
+ padding: 15px;
+
+
+
 }
 
 .menu--active {
@@ -115,6 +126,10 @@ html, body {
   width: 50%;
   height: 100vh;
   overflow: hidden;
+   font-family: 'lato';
+   font-size: 20px;
+   color: #ffffff;
+
 }
 .menu__list {
   margin: 0;
@@ -258,6 +273,8 @@ html, body {
   background-image: url(http://i57.tinypic.com/2ly32w6.jpg);
   background-size: auto 230.9401px;
   background-position: center;
+   backface-visibility: hidden;
+
 }
 
 .hexTop,
@@ -272,6 +289,7 @@ html, body {
   transform: scaleY(0.5774) rotate(-45deg);
   background: inherit;
   left: 29.29px;
+    backface-visibility: hidden;
 }
 
 /*counter transform the bg image on the caps*/
@@ -288,6 +306,7 @@ html, body {
   -ms-transform-origin: 0 0;
   transform-origin: 0 0;
   background: inherit;
+     backface-visibility: hidden;
 }
 
 .hexTop {
@@ -458,7 +477,7 @@ font-size: 2.5vmax;
   position: absolute;
   top: 50%;
   left: 50%;
-  padding: 0;
+  padding-left: 50%;
   transform: translate(-50%, -50%);
   padding: 1.2em;
   font-size: .5em;
