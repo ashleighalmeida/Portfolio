@@ -17,7 +17,10 @@
 
  // document.addEventListener("DOMContentLoaded", function(event) {
  //    console.log("DOM fully loaded and parsed");
+
  
+ 
+ // navigation
 
 (function() {
   
@@ -76,34 +79,43 @@
   
 }());
 
-$(document).ready(function() {
-  var color = 'one';
-  var counter = 0;
-  $('.desc').hide();
-  $('.hexagon').hover(
-    function() {
-      $(this).find('.desc').fadeIn('fast');
-      counter++;
-      if (counter === 0) {
-        color = 'base';
-      } else if (counter === 1) {
-        color = 'one';
-      } else if (counter === 2) {
-        color = 'two';
-      } else if (counter === 3) {
-        color = 'three';
-      } else if (counter >= 4){
-        counter = 0 ;
-        color = 'base';
-      }
-      $(this).find('.desc').addClass(color);
-    }, 
-    function() {
-      $(this).find('.desc').fadeOut('fast', function() {
-        $(this).removeClass(color);
-      });
-    });
-});
+
+
+ // gallery
+ $('.gallery ul li a').click(function() {
+     var itemID = $(this).attr('href');
+     $('.gallery ul').addClass('item_open');
+     $(itemID).addClass('item_open');
+     return false;
+
+
+
+
+ });
+ $('.close').click(function() {
+     $('.port, .gallery ul').removeClass('item_open');
+     return false;
+      
+
+
+
+ });
+
+ $(".gallery ul li a").click(function() {
+     $('html, body').animate({
+         scrollTop: parseInt($("#top").offset().top)
+     }, 400);
+
+      $(".gallery").hide();
+      $(".burger").hide();
+     $(".gallery close").show();
+           
+
+
+     
+ });
+
+
  // });
 
 
