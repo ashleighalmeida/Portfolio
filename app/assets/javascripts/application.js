@@ -18,7 +18,7 @@
  // document.addEventListener("DOMContentLoaded", function(event) {
  //    console.log("DOM fully loaded and parsed");
 
- 
+
  
  // navigation
 
@@ -40,6 +40,7 @@
         brand.classList.add('menu__brand--active');
         burger.classList.add('burger--close');
         $(".main").hide();
+        $(".gallery").hide();
         $(".header background:url").hide();
         for (var i = 0, ii = menuItems.length; i < ii; i++) {
           menuItems[i].classList.add('menu__item--active');
@@ -52,6 +53,7 @@
         brand.classList.remove('menu__brand--active');
         burger.classList.remove('burger--close');
          $(".main").show();
+        $(".gallery").show();
 
         for (var i = 0, ii = menuItems.length; i < ii; i++) {
           menuItems[i].classList.remove('menu__item--active');
@@ -95,6 +97,8 @@
  $('.close').click(function() {
      $('.port, .gallery ul').removeClass('item_open');
      return false;
+     $(".burger").show();
+      $(".gallery").show();
       
 
 
@@ -108,12 +112,12 @@
 
       $(".gallery").hide();
       $(".burger").hide();
-     $(".gallery close").show();
-           
+     $(".close").show();
+          
+
+      });
 
 
-     
- });
 
 
  // });

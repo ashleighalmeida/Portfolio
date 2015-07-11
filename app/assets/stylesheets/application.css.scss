@@ -30,7 +30,7 @@ $hex-size: 4.5em;
 
 html, body {
   font-size: 1.5em;
-  font-family: 'futura', 'helvetica';
+  font-family: 'lato';
   background: linear-gradient(to bottom right,rgba(212, 237, 251, 0.8), rgba(000, 000, 000, 0.9)), url("http://i.imgur.com/63AWW.jpg") no-repeat bottom fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -40,6 +40,7 @@ html, body {
   overflow: hidden;
   position: absolute;
   display:flex;
+  color: #ffffff;
 }
 
 * {
@@ -393,6 +394,7 @@ html, body {
   padding-right: 34px;
   margin: 17px;
   left:50px;
+  font-family: 'futura'
 }
 
 .header nav {
@@ -632,7 +634,9 @@ body index .main {
 height: auto;
   padding: 0;
   margin: 0;
-  z-index: -1;
+  // z-index: 1000;
+  position: static;
+
 }
 
 .gallery ul li {
@@ -649,6 +653,8 @@ margin:0 auto;
 
 
 }
+
+
 
 .gallery ul {
   padding-top: 100px;
@@ -731,6 +737,7 @@ margin:0 auto;
 
 .port img {
   width: 50%;
+
 }
 
 .port .description {
@@ -773,20 +780,23 @@ margin:0 auto;
   transition-delay: 0.5s;
 }
 
-.gallery .close {
+.close {
   width: 100px;
   height: 100px;
-  background: url("http://i57.tinypic.com/6sh0ck.png") no-repeat; 
-  position: absolute;
-  float: center;
-  top: -121px;
+  background: url("http://i57.tinypic.com/6e15lj.png") no-repeat center; 
+  left: 2%;
+  top: 10%;
   opacity: 1;
-  z-index: 1004;
+  z-index: 1000;
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
-  visibility: hidden;
+  position:absolute;
+  content: 'close';
+
+  
 }
+
 
 // .item_open .close {
 //   opacity: 1;
