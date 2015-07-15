@@ -758,6 +758,15 @@ margin:0 auto;
  padding: 15px;
 }
 
+.port a {
+  background: #ffffff;
+  padding: 10px;
+  color: #ccc;
+  text-decoration: none;
+  font-family: 'lato'
+
+}
+
 .port > * {
   opacity: 0;
   -webkit-transition: all 0.5s linear;

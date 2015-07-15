@@ -83,27 +83,23 @@
 
 
 
- // gallery
- $('.gallery ul li a').click(function() {
-     var itemID = $(this).attr('href');
-     $('.gallery ul').addClass('item_open');
-     $(itemID).addClass('item_open');
-     return false;
-
-
-
-
- });
- $('.close').click(function() {
-     $('.port, .gallery ul').removeClass('item_open');
-     return false;
-     $(".burger").show();
-      $(".gallery").show();
-      
+$('.gallery ul li a').click(function() {
+  var itemID = $(this).attr('href');
+  $('.gallery ul').addClass('item_open');
+  $(itemID).addClass('item_open');
+  return false;
 
 
 
  });
+
+$('.close').click(function() {
+  $('.port, .gallery ul').removeClass('item_open');
+  // Show the elements that were hidden when clicking on the thumbnail
+  $('.gallery, .burger').show();
+  $('.close').hide();
+  return false;
+});
 
  $(".gallery ul li a").click(function() {
      $('html, body').animate({
