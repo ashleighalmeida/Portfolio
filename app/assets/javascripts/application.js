@@ -39,8 +39,7 @@
         menuList.classList.add('menu__list--active');
         brand.classList.add('menu__brand--active');
         burger.classList.add('burger--close');
-        $(".main").hide();
-        $(".gallery").hide();
+        $(".gallery, .main, .wrapper").hide();
         $(".header background:url").hide();
         for (var i = 0, ii = menuItems.length; i < ii; i++) {
           menuItems[i].classList.add('menu__item--active');
@@ -52,8 +51,8 @@
         menuList.classList.remove('menu__list--active');
         brand.classList.remove('menu__brand--active');
         burger.classList.remove('burger--close');
-         $(".main").show();
-        $(".gallery").show();
+         $(".main, .gallery, .wrapper").show();
+
 
         for (var i = 0, ii = menuItems.length; i < ii; i++) {
           menuItems[i].classList.remove('menu__item--active');
@@ -84,38 +83,30 @@
 
 
  // gallery
- $('.gallery ul li a').click(function() {
-     var itemID = $(this).attr('href');
-     $('.gallery ul').addClass('item_open');
-     $(itemID).addClass('item_open');
-     return false;
+$('.gallery ul li a').click(function() {
+  var itemID = $(this).attr('href');
+  $('.gallery ul').addClass('item_open');
+  $(itemID).addClass('item_open');
+  return false;
+});
 
+$('.close').click(function() {
+  $('.port, .gallery ul').removeClass('item_open');
+  $('.gallery, .burger, .wrapper').show();
+  $('.close').hide();
+  return false;
+});
 
+$(".gallery ul li a").click(function() {
+  // $('html, body').animate({
+  //   scrollTop: parseInt($("#top").offset().top)
+  // }, 400);
 
+  $(".gallery, .burger, .wrapper").hide();
 
- });
- $('.close').click(function() {
-     $('.port, .gallery ul').removeClass('item_open');
-     return false;
-     $(".burger").show();
-      $(".gallery").show();
-      
-
-
-
- });
-
- $(".gallery ul li a").click(function() {
-     $('html, body').animate({
-         scrollTop: parseInt($("#top").offset().top)
-     }, 400);
-
-      $(".gallery").hide();
-      $(".burger").hide();
-     $(".close").show();
-          
-
-      });
+  $(".close").show();
+  $(".header").show();
+});
 
 
 
